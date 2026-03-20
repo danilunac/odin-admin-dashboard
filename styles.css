@@ -18,11 +18,8 @@ body {
     background-color: rgb(3, 154, 214);
     grid-column: 1;
     grid-row: 1 / 3;
-    /* Check height */
     height: 100vh;
-    padding-left: 10px;
-    padding-top: 15px;
-    padding-bottom: 10px;
+    padding: 15px 0 15px 10px;
     color: white;
     font-weight: 500;
 
@@ -81,13 +78,90 @@ body {
 }
 
 .header {
-    background: white;
+    background-color: white;
     grid-column: 2;
     grid-row: 1;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    padding: 15px 50px;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 30px;
+}
+
+.header svg {
+    width: 20px;
+    height: 20px;
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-search input {
+    flex: 1;
+    border: none;
+    border-radius: 20px;
+    max-width: 600px;
+    height: 25px;
+    background-color: rgb(233, 242, 252);
+}
+
+.header-user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 15px;
+    gap: 25px;
+}
+
+.header-user img {
+    width: 25px;
+    height: 25px;
+}
+
+.header-greeting {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-auto-flow: column;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.header-buttons button {
+    background-color: rgb(3, 154, 214);
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+.greeting-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-greeting img {
+    width: 60px;
+    height: 60px;
 }
 
 .main-content {
-    background: rgb(228, 228, 228);
+    background-color: rgb(233, 242, 252);
     grid-column: 2;
     grid-row: 2;
 }
